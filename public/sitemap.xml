@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://mediatraffics.com/</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mediatraffics.com/images/media-traffics-logo-transparent.webp</image:loc>
+      <image:title>Media Traffics Logo</image:title>
+      <image:caption>Official logo of Media Traffics LLC - Expert paid advertising and lead generation agency since 2013</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mediatraffics.com/privacy</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
