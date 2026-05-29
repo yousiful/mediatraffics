@@ -1,1 +1,12 @@
+# Reputation defense pages — static HTML, bypass SPA fallback
+/media-traffics-reviews    /media-traffics-reviews/index.html    200
+/media-traffics-reviews/   /media-traffics-reviews/index.html    200
+/about-yousif-alias        /about-yousif-alias/index.html        200
+/about-yousif-alias/       /about-yousif-alias/index.html        200
+/case-studies              /case-studies/index.html              200
+/case-studies/             /case-studies/index.html              200
+/is-media-traffics-legit   /is-media-traffics-legit/index.html   200
+/is-media-traffics-legit/  /is-media-traffics-legit/index.html   200
+
+# Catchall (SPA) stays last
 /*    /index.html   200
