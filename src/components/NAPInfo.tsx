@@ -78,8 +78,10 @@ export default function NAPInfo({ variant = 'full', showIcons = true, className 
           <div className="flex items-start gap-3">
             {showIcons && <MapPin className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />}
             <address itemProp="address" itemScope itemType="https://schema.org/PostalAddress" className="not-italic">
+              <span itemProp="streetAddress">{businessInfo.address.streetAddress}</span><br />
               <span itemProp="addressLocality">{businessInfo.address.addressLocality}</span>,{' '}
-              <span itemProp="addressRegion">{businessInfo.address.addressRegion}</span><br />
+              <span itemProp="addressRegion">{businessInfo.address.addressRegion}</span>{' '}
+              <span itemProp="postalCode">{businessInfo.address.postalCode}</span><br />
               <span itemProp="addressCountry">United States</span>
             </address>
           </div>

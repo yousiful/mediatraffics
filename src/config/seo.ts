@@ -13,8 +13,10 @@ export const businessInfo = {
   },
 
   address: {
-    addressLocality: 'San Francisco',
-    addressRegion: 'CA',
+    streetAddress: '32 N Gould St',
+    addressLocality: 'Sheridan',
+    addressRegion: 'WY',
+    postalCode: '82801',
     addressCountry: 'US'
   },
 
@@ -83,8 +85,10 @@ export const generateLocalBusinessSchema = () => {
 
     address: {
       '@type': 'PostalAddress',
+      streetAddress: businessInfo.address.streetAddress,
       addressLocality: businessInfo.address.addressLocality,
       addressRegion: businessInfo.address.addressRegion,
+      postalCode: businessInfo.address.postalCode,
       addressCountry: businessInfo.address.addressCountry
     },
 
