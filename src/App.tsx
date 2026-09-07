@@ -315,8 +315,6 @@ function App() {
             </a>
           </div>
 
-          </div>
-
           {/* Scroll Indicator */}
           <div className="animate-float">
             <ChevronDown className="w-8 h-8 mx-auto text-cyan-400 opacity-60" />
