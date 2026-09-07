@@ -298,7 +298,7 @@ export function generateInternalLink(
 export const contentLinkingOpportunities = {
   hero: [
     {
-      context: 'Our proven system has booked 86,050 appointments',
+      context: 'Our system manages paid ad campaigns across Meta, Google, and LinkedIn',
       linkTo: 'https://go.mediatraffics.com/price',
       anchor: 'proven Client Generation Loop'
     }
