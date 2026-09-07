@@ -42,7 +42,7 @@ export default function TermsOfService({ onBack }: TermsOfServiceProps) {
           <p className="text-gray-400 mb-8">
             <strong>Effective Date:</strong> January 1, 2013
             <br />
-            <strong>Last Updated:</strong> February 12, 2026
+            <strong>Last Updated:</strong> September 7, 2026
           </p>
 
           <div className="space-y-8 text-gray-300 leading-relaxed">
@@ -248,7 +248,7 @@ export default function TermsOfService({ onBack }: TermsOfServiceProps) {
 
               <h3 className="text-xl font-semibold text-cyan-400 mb-3 mt-6">11.1 Termination by Client</h3>
               <p>
-                You may cancel ongoing services at any time by providing written notice. Upon cancellation, services will continue through the end of your current paid billing period. No refunds will be issued for services already rendered or the current billing period.
+                You may cancel ongoing services at any time by contacting Support@mediatraffics.com or through your account settings. Upon cancellation, services continue through the end of your current paid billing period and future billing stops. Refund eligibility, including our 30-day money-back guarantee on initial purchases, is governed by our separate Refund Policy.
               </p>
 
               <h3 className="text-xl font-semibold text-cyan-400 mb-3 mt-6">11.2 Termination by Company</h3>

@@ -13,10 +13,8 @@ export const businessInfo = {
   },
 
   address: {
-    streetAddress: '123 Digital Drive',
     addressLocality: 'San Francisco',
     addressRegion: 'CA',
-    postalCode: '94102',
     addressCountry: 'US'
   },
 
@@ -25,11 +23,6 @@ export const businessInfo = {
     linkedin: 'https://linkedin.com/company/mediatraffics',
     twitter: 'https://twitter.com/mediatraffics',
     instagram: 'https://instagram.com/mediatraffics'
-  },
-
-  geo: {
-    latitude: '37.7749',
-    longitude: '-122.4194'
   },
 
   founders: ['Yousif Alias', 'Brian Silverston'],
@@ -90,17 +83,9 @@ export const generateLocalBusinessSchema = () => {
 
     address: {
       '@type': 'PostalAddress',
-      streetAddress: businessInfo.address.streetAddress,
       addressLocality: businessInfo.address.addressLocality,
       addressRegion: businessInfo.address.addressRegion,
-      postalCode: businessInfo.address.postalCode,
       addressCountry: businessInfo.address.addressCountry
-    },
-
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: businessInfo.geo.latitude,
-      longitude: businessInfo.geo.longitude
     },
 
     openingHoursSpecification: {
@@ -149,15 +134,7 @@ export const generateLocalBusinessSchema = () => {
       }))
     },
 
-    priceRange: '$$$',
-
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1'
-    }
+    priceRange: '$$$'
   };
 };
 

@@ -49,8 +49,6 @@ export default function SEOHead({
 
       { name: 'geo.region', content: 'US-CA' },
       { name: 'geo.placename', content: businessInfo.address.addressLocality },
-      { name: 'geo.position', content: `${businessInfo.geo.latitude};${businessInfo.geo.longitude}` },
-      { name: 'ICBM', content: `${businessInfo.geo.latitude}, ${businessInfo.geo.longitude}` },
 
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
