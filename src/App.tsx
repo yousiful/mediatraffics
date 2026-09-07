@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, Target, Zap, BarChart3, Award, Users, ArrowRight, ChevronDown, Play, CheckCircle2, Sparkles, X, Calendar, Gamepad2 } from 'lucide-react';
-import PaidAdsGame from './components/PaidAdsGame';
+import { TrendingUp, Target, Zap, BarChart3, Award, Users, ArrowRight, ChevronDown, Play, CheckCircle2, Sparkles, X, Calendar } from 'lucide-react';
 import HolidayParticles from './components/HolidayParticles';
 import HolidayBanner from './components/HolidayBanner';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -8,7 +7,6 @@ import RefundPolicy from './pages/RefundPolicy';
 import TermsOfService from './pages/TermsOfService';
 import SEOHead from './components/SEOHead';
 import NAPInfo from './components/NAPInfo';
-import SocialProofNotification from './components/SocialProofNotification';
 import GiftCardSection from './components/GiftCardSection';
 import { getCurrentHoliday } from './utils/holidays';
 
@@ -19,7 +17,6 @@ function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [cursorTrails, setCursorTrails] = useState<Array<{ x: number; y: number; id: number }>>([]);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
-  const [showGame, setShowGame] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [showRefund, setShowRefund] = useState(false);
   const [showTerms, setShowTerms] = useState(false);
@@ -204,10 +201,6 @@ function App() {
     }} />;
   }
 
-  if (showGame) {
-    return <PaidAdsGame onBack={() => setShowGame(false)} />;
-  }
-
   return (
     <div className="min-h-screen bg-gray-950 text-white overflow-x-hidden">
       <SEOHead />
@@ -322,19 +315,6 @@ function App() {
             </a>
           </div>
 
-          {/* Game Button */}
-          <div className="flex justify-center mb-16">
-            <button
-              onClick={() => setShowGame(true)}
-              onMouseMove={handleMagneticButton}
-              onMouseLeave={handleMagneticButtonReset}
-              className="group px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full font-bold text-lg hover:shadow-2xl hover:shadow-green-500/50 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 ripple-effect"
-              style={{ transition: 'transform 0.3s ease' }}
-            >
-              <Gamepad2 className="w-5 h-5" />
-              Try Our FREE Paid Ads Game
-              <Sparkles className="w-5 h-5" />
-            </button>
           </div>
 
           {/* Scroll Indicator */}
@@ -480,7 +460,7 @@ function App() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Kenji AI</h3>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Revolutionary AI-powered platform that automates and optimizes your marketing campaigns for maximum ROI.
+                AI-powered platform that automates and manages your marketing campaigns across Meta, Google, and LinkedIn.
               </p>
               <div className="flex gap-3">
                 <a
@@ -816,8 +796,6 @@ function App() {
         </div>
       </footer>
 
-      {/* Social Proof Notifications */}
-      <SocialProofNotification />
     </div>
   );
 }
