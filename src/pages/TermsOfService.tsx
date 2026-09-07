@@ -109,9 +109,9 @@ export default function TermsOfService({ onBack }: TermsOfServiceProps) {
                 If a payment fails, we may suspend or terminate your access to services. You remain responsible for all amounts due, plus any collection costs or legal fees incurred.
               </p>
 
-              <h3 className="text-xl font-semibold text-cyan-400 mb-3 mt-6">4.5 No Refunds</h3>
+              <h3 className="text-xl font-semibold text-cyan-400 mb-3 mt-6">4.5 Refunds</h3>
               <p>
-                All sales are final. Please refer to our separate Refund Policy for complete details. NO REFUNDS will be issued under any circumstances.
+                We offer a 30-day money-back guarantee on initial purchases. Please refer to our separate Refund Policy for the complete guarantee terms and how to request a refund.
               </p>
             </section>
 

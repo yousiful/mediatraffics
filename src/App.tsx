@@ -130,38 +130,13 @@ function App() {
   };
 
   const metrics = [
-    { value: '86,050', label: 'Appointments Booked', growth: 'Real Results' },
-    { value: '830', label: 'Confirmed Clients', growth: 'And Growing' },
-    { value: '$1.6B', label: 'In Total Sales', growth: 'Generated' },
-    { value: '12+', label: 'Years Experience', growth: 'Since 2013' }
+    { value: 'Meta, Google, LinkedIn', label: 'Platforms We Manage', growth: 'Paid Ads' },
+    { value: 'Since 2013', label: 'Running Ad Campaigns', growth: '12+ Years' },
+    { value: 'Insurance & Home Services', label: 'Industries We Serve', growth: 'Specialized' },
+    { value: 'Ads + CRM', label: 'Built and Managed for You', growth: 'Done-For-You' }
   ];
 
-  const brands = [
-    { name: 'Kia', color: '#BB162B' },
-    { name: 'Hyundai', color: '#002C5F' },
-    { name: 'Pepsi', color: '#004B93' },
-    { name: 'Coca-Cola', color: '#F40009' },
-    { name: 'Family First Life', color: '#0066CC' },
-    { name: 'Ethos Insurance', color: '#6B4CE6' },
-    { name: 'Mutual of Omaha', color: '#003DA5' },
-    { name: 'Primerica', color: '#004990' },
-    { name: 'Symmetry Financial', color: '#E74C3C' },
-    { name: 'American Income Life', color: '#C41E3A' },
-    { name: 'TransAmerica', color: '#005EB8' },
-    { name: 'Globe Life', color: '#1E90FF' },
-    { name: 'Foresters Financial', color: '#006747' },
-    { name: 'National Life Group', color: '#00457C' },
-    { name: 'Royal Plumbing', color: '#FF6B35' },
-    { name: 'Premier HVAC', color: '#00A8E1' },
-    { name: 'Elite Roofing Co', color: '#2C3E50' },
-    { name: 'HomeGuard Security', color: '#E74C3C' },
-    { name: 'ProClean Services', color: '#27AE60' },
-    { name: 'Apex Home Solutions', color: '#F39C12' },
-    { name: 'Champion Exteriors', color: '#8E44AD' },
-    { name: 'TrustShield Insurance', color: '#3498DB' },
-    { name: 'SafeHaven Coverage', color: '#16A085' },
-    { name: 'Liberty Home Pros', color: '#D35400' },
-    { name: 'FirstRate Contractors', color: '#C0392B' },
+  const brands: { name: string; color: string }[] = [
     { name: 'Summit Restoration', color: '#7F8C8D' },
     { name: 'Precision Air Systems', color: '#2980B9' },
     { name: 'Guardian Property Care', color: '#27AE60' },
@@ -300,7 +275,7 @@ function App() {
           <div className="inline-block mb-6 px-6 py-2 bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 rounded-full border border-cyan-500/30">
             <span className="text-cyan-400 font-semibold flex items-center gap-2">
               <Sparkles className="w-4 h-4" />
-              Trusted by 830+ Businesses Since 2013
+              Running Paid Ad Campaigns Since 2013
             </span>
           </div>
 
@@ -310,14 +285,14 @@ function App() {
               Qualified Leads
             </span>
             <br />
-            <span className="text-white">That Turn Into</span>{' '}
+            <span className="text-white">Through</span>{' '}
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-              $1.6B in Sales
+              Managed Ad Campaigns
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Stop wasting money on ads that don't convert. Our proven system has booked <span className="text-cyan-400 font-bold">86,050 appointments</span> and generated billions in revenue for businesses just like yours.
+            We build, launch, and manage paid ad campaigns across Meta, Google, and LinkedIn, and route every lead straight into your CRM.
           </p>
 
           {/* CTA Buttons */}
@@ -369,7 +344,7 @@ function App() {
         </div>
       </section>
 
-      {/* Trusted By Section */}
+      {/* What We Do Section */}
       <section
         id="brands"
         data-reveal
@@ -378,43 +353,14 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black mb-4">
-              Trusted By <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Industry Leaders</span>
+              Built For <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Insurance & Home Services</span>
             </h2>
-            <p className="text-gray-400 text-lg">Powering growth for insurance agencies and home service companies nationwide</p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
-            {brands.map((brand, index) => (
-              <div
-                key={index}
-                className="group relative tilt-card flex items-center justify-center p-4"
-                onMouseMove={handleCardTilt}
-                onMouseLeave={handleCardTiltReset}
-                onTouchStart={(e) => {
-                  const touch = e.touches[0];
-                  const fakeEvent = new MouseEvent('mousemove', {
-                    clientX: touch.clientX,
-                    clientY: touch.clientY
-                  });
-                  handleCardTilt(fakeEvent as any);
-                }}
-                onTouchEnd={(e) => {
-                  handleCardTiltReset(e as any);
-                }}
-              >
-                <div className="text-lg md:text-xl font-bold text-gray-500 group-hover:text-white transition-all duration-300 transform group-hover:scale-110 text-center">
-                  {brand.name}
-                </div>
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl rounded-lg"
-                  style={{ backgroundColor: brand.color }}
-                ></div>
-              </div>
-            ))}
+            <p className="text-gray-400 text-lg">Paid ad management for insurance agencies and home service companies nationwide</p>
           </div>
         </div>
       </section>
 
-      {/* Live Metrics Section */}
+      {/* Capabilities Section */}
       <section
         id="metrics"
         data-reveal
@@ -424,11 +370,10 @@ function App() {
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-black mb-4">
               <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-                Real Results
+                What We Do
               </span>
-              {' '}That Matter
             </h2>
-            <p className="text-gray-400 text-lg">Live performance metrics from our systems</p>
+            <p className="text-gray-400 text-lg">Paid ad management and CRM automation, done for you</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6 mb-12">
