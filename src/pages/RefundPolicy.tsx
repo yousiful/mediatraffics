@@ -237,7 +237,7 @@ export default function RefundPolicy({ onBack }: RefundPolicyProps) {
               </p>
               <div className="space-y-3 text-gray-200">
                 <p><strong>Email:</strong> <a href="mailto:Support@mediatraffics.com" className="text-cyan-400 hover:text-cyan-300">Support@mediatraffics.com</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+18312634402" className="text-cyan-400 hover:text-cyan-300">+1 (831) 263-4402</a> (24/7 Front Desk)</p>
+                <p><strong>Phone:</strong> <a href="tel:+12133440705" className="text-cyan-400 hover:text-cyan-300">+1 (213) 344-0705</a> (24/7 Front Desk)</p>
                 <p><strong>Business Name:</strong> Media Traffics LLC</p>
               </div>
             </section>

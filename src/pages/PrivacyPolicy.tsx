@@ -241,8 +241,8 @@ export default function PrivacyPolicy({ onBack }: PrivacyPolicyProps) {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-emerald-400" />
-                  <a href="tel:+18312634402" className="text-emerald-400 hover:text-emerald-300 transition-colors">
-                    +1 (831) 263-4402
+                  <a href="tel:+12133440705" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+                    +1 (213) 344-0705
                   </a>
                   <span className="text-gray-400 text-sm">(24/7 Front Desk)</span>
                 </div>

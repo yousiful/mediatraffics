@@ -7,8 +7,8 @@ export const businessInfo = {
 
   contact: {
     email: 'Support@mediatraffics.com',
-    phone: '+18312634402',
-    phoneDisplay: '+1 (831) 263-4402',
+    phone: '+12133440705',
+    phoneDisplay: '+1 (213) 344-0705',
     hours: '24/7'
   },
 
