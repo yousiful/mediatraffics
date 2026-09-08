@@ -249,6 +249,8 @@ export default function PrivacyPolicy({ onBack }: PrivacyPolicyProps) {
                 <div className="mt-4 text-gray-400">
                   <strong className="text-white">Media Traffics LLC</strong>
                   <br />
+                  32 N Gould St, Sheridan, WY 82801
+                  <br />
                   Business Hours: 24/7 Support Available
                 </div>
               </div>
