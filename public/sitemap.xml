@@ -4,11 +4,11 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mediatraffics.com/</loc>
-    <lastmod>2025-11-27</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://mediatraffics.com/images/media-traffics-logo-transparent.webp</image:loc>
+      <image:loc>https://mediatraffics.com/logo-320.webp</image:loc>
       <image:title>Media Traffics Logo</image:title>
       <image:caption>Official logo of Media Traffics LLC - Expert paid advertising and lead generation agency since 2013</image:caption>
     </image:image>
@@ -18,6 +18,19 @@
     <lastmod>2025-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://mediatraffics.com/terms</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://mediatraffics.com/refund-policy</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
 
   <!-- Reputation defense pages added 2026-05-29 -->

@@ -17,9 +17,9 @@ function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [cursorTrails, setCursorTrails] = useState<Array<{ x: number; y: number; id: number }>>([]);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
-  const [showPrivacy, setShowPrivacy] = useState(false);
-  const [showRefund, setShowRefund] = useState(false);
-  const [showTerms, setShowTerms] = useState(false);
+  const [showPrivacy, setShowPrivacy] = useState(() => window.location.pathname.replace(/\/$/, '') === '/privacy');
+  const [showRefund, setShowRefund] = useState(() => window.location.pathname.replace(/\/$/, '') === '/refund-policy');
+  const [showTerms, setShowTerms] = useState(() => window.location.pathname.replace(/\/$/, '') === '/terms');
   const [holidayTheme, setHolidayTheme] = useState(getCurrentHoliday());
 
   useEffect(() => {
@@ -104,6 +104,8 @@ function App() {
   }, [isModalOpen]);
 
   useEffect(() => {
+    // The review widget script expects the reviews iframe, which only exists on the home page.
+    if (['/privacy', '/refund-policy', '/terms'].includes(window.location.pathname.replace(/\/$/, ''))) return;
     const reviewScript = document.createElement('script');
     reviewScript.type = 'text/javascript';
     reviewScript.src = 'https://reputationhub.site/reputation/assets/review-widget.js';
@@ -258,8 +260,11 @@ function App() {
             }}
           >
             <img
-              src="/tmp75mtgp0b-removebg-preview.png"
+              src="/logo-320.webp"
               alt="Media Traffics Logo"
+              width={160}
+              height={160}
+              fetchPriority="high"
               className="w-40 h-40 object-contain animate-float drop-shadow-2xl"
               style={{ filter: 'drop-shadow(0 0 30px rgba(6, 182, 212, 0.6))' }}
             />
@@ -540,6 +545,7 @@ function App() {
           <div className="max-w-6xl mx-auto">
             <iframe
               className="lc_reviews_widget"
+              loading="lazy"
               src="https://reputationhub.site/reputation/widgets/review_widget/q5L4ttbBMHNxieXIcTVJ?widgetId=692894dfd5318a0745d7ec3e"
               frameBorder="0"
               scrolling="no"
@@ -693,8 +699,11 @@ function App() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div className="flex items-start gap-4">
               <img
-                src="/tmp75mtgp0b-removebg-preview.png"
+                src="/logo-320.webp"
                 alt="Media Traffics Logo"
+                width={48}
+                height={48}
+                loading="lazy"
                 className="w-12 h-12 object-contain drop-shadow-lg"
                 style={{ filter: 'drop-shadow(0 0 10px rgba(6, 182, 212, 0.4))' }}
               />

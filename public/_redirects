@@ -1,3 +1,8 @@
+# Send www and plain http straight to https://mediatraffics.com in one hop
+http://www.mediatraffics.com/*   https://mediatraffics.com/:splat   301!
+https://www.mediatraffics.com/*  https://mediatraffics.com/:splat   301!
+http://mediatraffics.com/*       https://mediatraffics.com/:splat   301!
+
 # Reputation defense pages — static HTML, bypass SPA fallback
 /media-traffics-reviews    /media-traffics-reviews/index.html    200
 /media-traffics-reviews/   /media-traffics-reviews/index.html    200
@@ -8,5 +13,13 @@
 /is-media-traffics-legit   /is-media-traffics-legit/index.html   200
 /is-media-traffics-legit/  /is-media-traffics-legit/index.html   200
 
-# Catchall (SPA) stays last
-/*    /index.html   200
+# Real SPA routes (App.tsx reads window.location.pathname for these)
+/privacy          /index.html   200
+/privacy/         /index.html   200
+/terms            /index.html   200
+/terms/           /index.html   200
+/refund-policy    /index.html   200
+/refund-policy/   /index.html   200
+
+# Anything else is a real 404
+/*    /404.html   404
