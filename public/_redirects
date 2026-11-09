@@ -3,23 +3,21 @@ http://www.mediatraffics.com/*   https://mediatraffics.com/:splat   301!
 https://www.mediatraffics.com/*  https://mediatraffics.com/:splat   301!
 http://mediatraffics.com/*       https://mediatraffics.com/:splat   301!
 
-# Reputation defense pages — static HTML, bypass SPA fallback
-/media-traffics-reviews    /media-traffics-reviews/index.html    200
+# Reputation pages: static HTML in public/<slug>/index.html. The no-slash URL is the
+# canonical, so it is force-rewritten (200!). Without the ! Netlify 301s it to the
+# slash URL first, and crawlers that don't follow redirects see an empty page.
+/media-traffics-reviews    /media-traffics-reviews/index.html    200!
 /media-traffics-reviews/   /media-traffics-reviews/index.html    200
-/about-yousif-alias        /about-yousif-alias/index.html        200
+/about-yousif-alias        /about-yousif-alias/index.html        200!
 /about-yousif-alias/       /about-yousif-alias/index.html        200
-/case-studies              /case-studies/index.html              200
+/case-studies              /case-studies/index.html              200!
 /case-studies/             /case-studies/index.html              200
-/is-media-traffics-legit   /is-media-traffics-legit/index.html   200
+/is-media-traffics-legit   /is-media-traffics-legit/index.html   200!
 /is-media-traffics-legit/  /is-media-traffics-legit/index.html   200
 
-# Real SPA routes (App.tsx reads window.location.pathname for these)
-/privacy          /index.html   200
-/privacy/         /index.html   200
-/terms            /index.html   200
-/terms/           /index.html   200
-/refund-policy    /index.html   200
-/refund-policy/   /index.html   200
+# /, /privacy, /terms, /refund-policy and the guide pages are written to
+# dist/<route>.html by scripts/prerender.mjs. Netlify serves /privacy from
+# privacy.html on its own, so they need no rule here.
 
 # Anything else is a real 404
 /*    /404.html   404

@@ -5,10 +5,11 @@ import HolidayBanner from './components/HolidayBanner';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import RefundPolicy from './pages/RefundPolicy';
 import TermsOfService from './pages/TermsOfService';
-import SEOHead from './components/SEOHead';
 import NAPInfo from './components/NAPInfo';
 import GiftCardSection from './components/GiftCardSection';
 import { getCurrentHoliday } from './utils/holidays';
+import { homeFaq } from './data/homeFaq';
+import { guides } from './data/guides';
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -205,7 +206,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white overflow-x-hidden">
-      <SEOHead />
       {/* Holiday Effects */}
       {holidayTheme && (
         <>
@@ -324,6 +324,16 @@ function App() {
           <div className="animate-float">
             <ChevronDown className="w-8 h-8 mx-auto text-cyan-400 opacity-60" />
           </div>
+        </div>
+      </section>
+
+      {/* Direct answer (what AI search engines and skimmers quote) */}
+      <section id="what-is-media-traffics" className="py-16 bg-gray-900">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2 className="text-2xl md:text-3xl font-black mb-4">What is Media Traffics?</h2>
+          <p className="text-gray-300 text-lg leading-relaxed">
+            Media Traffics is a paid ads agency for insurance agencies and home service companies. We build and manage campaigns on Meta, Google and LinkedIn and route every lead into your CRM with instant follow-up. Since 2013 we have worked with 500+ clients and generated $3.35M for them.
+          </p>
         </div>
       </section>
 
@@ -528,6 +538,30 @@ function App() {
         </div>
       </section>
 
+      {/* Guides Section */}
+      <section id="guides" className="py-20 bg-gray-950">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black mb-4">
+              Guides for <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Insurance & Home Services</span>
+            </h2>
+            <p className="text-gray-400 text-lg">How we run paid ads in the niches we know best</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {guides.map((g) => (
+              <a
+                key={g.slug}
+                href={`/${g.slug}`}
+                className="block p-6 rounded-2xl bg-gray-900 border border-gray-700 hover:border-cyan-500/50 transition-colors"
+              >
+                <h3 className="text-xl font-bold mb-2 text-white">{g.title}</h3>
+                <p className="text-gray-400">{g.blurb}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Reviews Section */}
       <section
         id="reviews"
@@ -586,7 +620,7 @@ function App() {
               </div>
               <h3 className="text-2xl font-bold mb-4">12+ Years Proven Track Record</h3>
               <p className="text-gray-400 leading-relaxed">
-                Since 2013, we've helped hundreds of businesses scale their lead generation and revenue.
+                Since 2013 we have run paid ads for 500+ clients and generated $3.35M for them.
               </p>
             </div>
 
@@ -614,10 +648,30 @@ function App() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Qualified Lead Generation</h3>
               <p className="text-gray-400 leading-relaxed">
-                We don't just drive traffic—we generate high-quality leads that convert into paying customers.
+                We optimize for leads that book appointments and buy, and we report cost per booked appointment alongside cost per lead.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-20 bg-gray-900">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-black mb-10 text-center">
+            Frequently Asked <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Questions</span>
+          </h2>
+          <div className="space-y-4">
+            {homeFaq.map((f) => (
+              <details key={f.q} className="group p-6 rounded-2xl bg-gray-950 border border-gray-700" open>
+                <summary className="cursor-pointer text-lg font-bold text-white list-none">{f.q}</summary>
+                <p className="mt-3 text-gray-300 leading-relaxed">{f.a}</p>
+              </details>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-gray-400">
+            More answers: <a href="/is-media-traffics-legit" className="text-cyan-400 hover:underline">Is Media Traffics legit?</a> · <a href="/case-studies" className="text-cyan-400 hover:underline">Case studies</a> · <a href="/media-traffics-reviews" className="text-cyan-400 hover:underline">Reviews</a> · <a href="/about-yousif-alias" className="text-cyan-400 hover:underline">About Yousif Alias</a>
+          </p>
         </div>
       </section>
 
@@ -633,7 +687,7 @@ function App() {
             Ready to <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Scale Your Business?</span>
           </h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Join hundreds of successful businesses that trust Media Traffics to generate qualified leads and drive revenue growth.
+            500+ clients since 2013. Book a call and we will tell you straight whether paid ads make sense for your business right now.
           </p>
           <button
             onClick={openModal}

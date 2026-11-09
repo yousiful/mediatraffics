@@ -77,6 +77,10 @@ export default function SEOHead({
     }
     canonical.href = canonicalUrl;
 
+    // Prerendered pages (scripts/prerender.mjs) already ship the full JSON-LD
+    // graph, including FAQPage. Don't wipe it.
+    if (document.querySelector('script[type="application/ld+json"][data-static-seo]')) return;
+
     const defaultSchemas = [
       generateLocalBusinessSchema(),
       generateOrganizationSchema(),

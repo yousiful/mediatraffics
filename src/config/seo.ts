@@ -68,6 +68,15 @@ export const businessInfo = {
   ]
 };
 
+// Public profiles confirmed to belong to Media Traffics (same list as index.html).
+const sameAs = [
+  'https://kenjiai.com',
+  'https://www.trustpilot.com/review/mediatraffics.com',
+  'https://www.linkedin.com/in/yousifalias/',
+  'https://www.bbb.org/us/ca/san-diego/profile/advertising/media-traffics-1126-1000055953',
+  'https://www.yelp.com/biz/media-traffics-san-diego'
+];
+
 export const generateLocalBusinessSchema = () => {
   return {
     '@context': 'https://schema.org',
@@ -107,12 +116,7 @@ export const generateLocalBusinessSchema = () => {
       closes: '23:59'
     },
 
-    sameAs: [
-      businessInfo.social.facebook,
-      businessInfo.social.linkedin,
-      businessInfo.social.twitter,
-      businessInfo.social.instagram
-    ],
+    sameAs,
 
     founder: businessInfo.founders.map(name => ({
       '@type': 'Person',
@@ -160,12 +164,7 @@ export const generateOrganizationSchema = () => {
       availableLanguage: ['English']
     },
 
-    sameAs: [
-      businessInfo.social.facebook,
-      businessInfo.social.linkedin,
-      businessInfo.social.twitter,
-      businessInfo.social.instagram
-    ]
+    sameAs
   };
 };
 
